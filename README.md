@@ -42,5 +42,25 @@ jQuery(window).on('resizestop resizestart', function (e) {
 });
 ```
 
+## Currying
+You can use `resizestart` and `resizestop` instead of using `on` binding.
+```js
+jQuery(window).resizestart(function (e) {
+	console.log('resize started');
+});
+```
+
+```js
+jQuery(window).resizestop(function (e) {
+	console.log('resize stopped');
+});
+```
+
+```js
+jQuery(window).resizestop(1000, function (e) {
+	console.log('resize stopped'); // will work 1000ms delayed.
+});
+```
+
 ## License
 License is CC0, means it is published to the public domain. You can use it for free wherever/whenever you want.
